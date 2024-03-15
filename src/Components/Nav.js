@@ -9,7 +9,7 @@ const Nav= () => {
      <nav className='navbar'> 
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/users'>User</NavLink>
-        <NavLink to='/admin'>Admin</NavLink>
+        {auth.user=== 'admin' &&<NavLink to='/admin'>Admin</NavLink>}
       {!auth.user &&  <NavLink to='/login'>Login</NavLink> }
        {!auth.user && <NavLink to='/signup'>Signup</NavLink> }
         
